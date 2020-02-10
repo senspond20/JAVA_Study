@@ -1,0 +1,138 @@
+변수(Variable) : 메모리상에 값을 저장할 수 있는 공간
+
+
+변수를 사용하지 않으면
+System.out.println(2 * 3.141592653589793 * 10);
+System.out.println(3.141592653589793 * 10 * 10);
+System.out.println(3.141592653589793 * 10 * 10 * 20);
+System.out.println(4 * 3.141592653589793 * 10 * 10);
+
+변수를 사용하면
+double pi = 3.141592653589793;
+int r = 10;
+int h = 20;
+System.out.println(2 * pi * r);
+System.out.println(pi * r * r);
+System.out.println(pi * r * r * h);
+System.out.println(4 * pi * r * r);
+
+가독성이 좋아짐
+재사용성 증가로 인한
+코드량 감소
+유지보수 용이
+
+변수의 선언
+메모리 공간에 데이터를 저장할 수 있는 공간을 할당하는 것
+
+자료형	       변수명 ; 
+변수타입지정 변수명지정
+
+- 자료형 종류
+1.논리형(boolean)
+2.문자형
+   문자(char)
+   문자열(String) ---- 참조형 자료형 (클래스)
+(모든 클래스는 자료형이 될 수가 있다.)
+
+3.숫자형
+   정수형(byte 1byte, short 2byte, int 4byte, long 8byte)
+   실수형(float 4byte, double 8byte)
+
+★자료형
+1.기본형 자료형(기본으로 제공하는 자료형 8개)
+2.참조형 자료형(자바에서 제공하는자료형 + 내가 만드는 자료형
+                기본 8개 이외에 모든)
+정수형의 기본 int
+실수형의 기본 double
+
+(컴퓨터에서 가장 읽기 좋은 크기 4byte. 정수 int
+(실수에서 유효성으로 정확성이 중요하기에 double이 기본
+float 소주점 아래 7자리 소수점 아래 15자리)
+
+변수명은 의미있게 짓는다
+
+기본값
+boolean false
+char 유니코드 \u0000 아무것도 없는 공간
+byte,short,int 0
+long 0L
+float 0.0f
+double 0.0d
+
+변수 명명 규칙
+1. 대소문자가 구분되며 길이 제한이 없다.
+	ex)Tree, tree 다르다. 
+
+2. 예약어를 사용하면 안 된다.
+	ex)true, final, String, void 등
+
+3. 맨앞에 숫자로 시작하면 안 된다.
+	ex)age1은 가능하지만 1age는 불가능
+
+4. 특수문자는 '_'와 '$' 만을 허용한다.
+	ex) -'$'는 내부 클래스에서 사용
+	    -'_'사용 시 컴파일에러는 없지만 관례상 사용하지 않는 것이 좋음
+
+5. 여러 단어 이름은 단어의 첫글자를 대문자로 한다.
+   단, 첫 시작 글자는 소문자로 하늘 것이 관례이다.
+	ex)ageOfVampire, userName
+	낙타등표기법
+
+ 변수의 시작도 소문자로 쓰는것이 관례
+ 클래스는 시작은 대문자.
+
+예약어
+
+abstract, default, if package, this
+assert, do, goto, private, throw
+doolean , double, implements, protected, throws,
+break, else, import, public, transient, byte, enum, 
+instanceof ...
+
+값 대입
+생성한 변수(저장공간)에 값을 대입하는 것
+int age;
+age = 10; ( = 대입연산자)
+오른쪽에 있는 값을 왼쪽의 공간에 집어 넣는다.
+저장공간에 10이라는 값을 집어넣는다.
+
+int max = 100;
+int age = 10;
+
+age = max;
+max에 있는 값이 age에 있는 공간에 들어간다.
+변수라는 공간에는 하나의 값만 저장.(한개의 데이터만 보관)
+
+리터럴(상수가 다른곳에서 쓰엿기 때문에)
+변수에 대입되는 값 자체
+short s = 32767;
+int i = 100;
+long l = 10000L;
+float f = 0.123f;
+double d = 3.14;
+char c = 'A';
+
+상수 선언 
+( 수학에서는 상수 - 변하지 않는값)
+Java에서는 한번만 저장(기록)할 수 있는 메모리 의미
+
+final int AGE;
+final int NUM = 100;
+
+final int MAX_NUM = 100;
+
+(final 마지막 그 다음값은 없다는 의미로)
+(final 이 붙은 상수의 경우. 변수이름을 대문자로 지어준다.)
+
+초기화.
+처음에 값을 집어넣을때
+선언과 동시에 초기화.
+final int NUM = 100;
+
+대입
+
+문자열. 
+
+String str = "기차";
+String str = new String("기차");
+

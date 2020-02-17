@@ -1,0 +1,12 @@
+package com.kh.example.chap02_tryCatch.run;
+
+import com.kh.example.chap02_tryCatch.controller.TryCatchController;
+
+public class Run {
+	public static void main(String[] args) {
+		TryCatchController tc = new TryCatchController();
+		tc.method1();
+	}
+	
+	
+}
